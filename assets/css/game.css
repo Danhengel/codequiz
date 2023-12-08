@@ -1,0 +1,44 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 25%;
+    font-size: 0.8rem;
+    border: 0.1rem solid black;
+    background-color: purple;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 purple;
+    transform: translateY(-0.1rem);
+    transition: transform  150ms;
+}
+
+.choice-prefix {
+    background-color: purple;
+    padding: 1rem 1rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 1rem;
+    color: white;
+    width: 100%;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scorecontainer {
+    display: inline-flex;
+}
+
+h8 {
+    color: white;
+}
+
+p8 {
+    color: white;
+}

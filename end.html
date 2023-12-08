@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Done!</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/end.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h5> All Done!</h5>
+            <div class="finalScore">
+                <p>Your final score is: </p>
+                <h6 id="finalScore"></h6>
+            </div>
+
+            <div class="score">
+                
+                <form>
+                    <p1>Enter initials: </p1>
+                    <input 
+                        type="text" 
+                        name="username" 
+                        id="username" 
+                        placeholder="username">
+                    
+                    <button 
+                        type="submit" 
+                        class="btn" 
+                        id="saveScoreBtn"
+                        onclick="saveHighScore(event)"
+                        disabled
+                    >
+                     
+                
+                </form>
+                <a class="btn" href="./highScores.html">Submit</a>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/end.js"></script>
+</body>
+</html>
