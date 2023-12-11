@@ -9,14 +9,18 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+function init() {
+   playerScore()
+}
+
 let questions = [
     {
         question: "Commonly used data types DO NOT include:",
         choice1: "strings",
-        choice2: "booligans",
+        choice2: "booleans",
         choice3: "alerts",
         choice4: "numbers",
-        answer: 3
+        answer: 4
     },
     {
         question: "The condition in an if / else statement is enclosed withing ____.",
@@ -24,13 +28,13 @@ let questions = [
         choice2: "curly brackets",
         choice3: "parentheses",
         choice4: "square backets",
-        answer: 3       
+        answer: 4       
     },
     {
         question: "Arrays in JavaScript can be used to store ____.",
         choice1: "numbers and strings",
         choice2: "other arrays",
-        choice3: "booligans",
+        choice3: "booleans",
         choice4: "all of the above",
         answer: 4
     },
@@ -52,6 +56,9 @@ let questions = [
     },
 
 ];
+
+
+
 const CORRECT_BONUS = 5;
 const MAX_QUESTIONS = 5;
 
@@ -62,10 +69,11 @@ startGame = () => {
     getNewQuestion();
 };
 
-getNewQuestion = () => {
+function getNewQuestion () {
+    var storeWins = localStorage.getItem("winCount");
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("codequiz\end.html");
+        return window.location.assign("./end.html");
     }
 
     questionCounter++;
@@ -106,7 +114,6 @@ choices.forEach((choice) => {
     });
   });
 
-  
 incrementScore = num => {
   score += num;
   scoreText.innerText = score;

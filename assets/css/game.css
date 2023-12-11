@@ -5,6 +5,7 @@
     font-size: 0.8rem;
     border: 0.1rem solid black;
     background-color: purple;
+    text-align: center;
 }
 
 .choice-container:hover {
@@ -41,4 +42,9 @@ h8 {
 
 p8 {
     color: white;
+}
+
+p {
+    text-align: center;
+    justify-content: center;
 }
